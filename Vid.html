@@ -1,0 +1,36 @@
+Vid. Html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+    </style>
+</head>
+<body>
+    <video src=""
+           width="device-width" height="device-width" controls="controls" autoplay="autoplay" playsinline> 
+    </video>
+
+    <script>
+        document.querySelector("video").requestFullscreen().catch(function(error) {
+            console.log("Unable to enter full-screen mode:", error.message, error.name);
+        });
+    </script>
+</body>
+</html>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

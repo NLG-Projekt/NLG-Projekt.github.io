@@ -1,0 +1,16 @@
+.demo-card-wide.mdl-card {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  
+  .demo-card-wide > .mdl-card__title {
+    color: #ffffff;
+    height: 180px;
+    background: url("matrix-g8d6ed7561_1920.jpg") center / cover;
+  }
+  
+  .demo-card-wide > .mdl-card__menu {
+    color: #121317;
+  }
+  
