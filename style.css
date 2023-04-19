@@ -13,4 +13,8 @@
   .demo-card-wide > .mdl-card__menu {
     color: #121317;
   }
-  
+  @media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
