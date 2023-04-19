@@ -13,10 +13,6 @@
   .demo-card-wide > .mdl-card__menu {
     color: #121317;
   }
-  @media screen and (width: 2043px) {
-  body {
-    width: 2043px;
-    height: 1536px;
-    font-size: 16px;
-  }
+@media (max-width: 768px) {
+  /* CSS-Regeln, die auf Bildschirmgrößen von 768px oder kleiner angewendet werden */
 }
