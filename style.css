@@ -13,6 +13,6 @@
   .demo-card-wide > .mdl-card__menu {
     color: #121317;
   }
-@media (max-width: 768px) {
-  /* CSS-Regeln, die auf Bildschirmgrößen von 768px oder kleiner angewendet werden */
+@media (max-width: 2056px) {
+  zoom:50%;
 }
