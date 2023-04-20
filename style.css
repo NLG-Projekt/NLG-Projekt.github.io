@@ -2,9 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url("IMG_0684.jpeg");
+  background-image: url("IMG_0684.jpeg") center / cover ;
   width: 100%;
-  height: auto;
 
 .demo-card-wide.mdl-card {
     position: absolute;
