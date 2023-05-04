@@ -7,7 +7,7 @@
   .demo-card-wide > .mdl-card__title {
     color: #ffffff;
     height: 180px;
-    background: url("matrix-g8d6ed7561_1920.jpg") center / cover;
+    background: url("matrix-g8d6ed7561_1920.jpg");
   }
   
   .demo-card-wide > .mdl-card__menu {
