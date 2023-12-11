@@ -1,2 +1,0 @@
-# NLG-Projekt
- 
