@@ -2,8 +2,8 @@ const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
 console.log(collisions);
-canvas.width = 1820;
-canvas.height = 900;
+canvas.width = 1024;
+canvas.height = 720;
 
 const collisionsMap = [];
 for (let i = 0; i < collisions.length; i += 70) {
