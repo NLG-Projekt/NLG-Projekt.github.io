@@ -1,0 +1,31 @@
+; AutoHotkey Script
+
+; This function enables a triggerbot for Fortnite.
+; A triggerbot automatically shoots when the crosshair is on an enemy player.
+
+Triggerbot()
+{
+    ; Check if the game window is active
+    IfWinActive, Fortnite
+    {
+        ; Loop to continuously check for enemy players
+        Loop
+        {
+            ; Get the color of the pixel at the center of the screen
+            PixelGetColor, color, 960, 540
+
+            ; Check if the color matches the color of an enemy player
+            If (color = 0xFF0000)
+            {
+                ; Shoot by sending a mouse click
+                Click
+            }
+
+            ; Pause for a short moment before checking again
+            Sleep, 10
+        }
+    }
+}
+
+; Call the Triggerbot function to start the triggerbot
+Triggerbot()
