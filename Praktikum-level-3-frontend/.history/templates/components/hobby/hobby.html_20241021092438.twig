@@ -1,0 +1,69 @@
+{% block style %}
+    <style>
+        .hobby {
+            background-color: rgb(var(--color-primary-darker));
+            padding: 80px;
+            
+        }
+
+        .hobby-element{
+            grid-gap: 32px;
+            max-width: 1024px;
+            grid-template-columns: 60% auto;
+            display: grid;
+
+        }
+        .hobby-cards{
+            grid-gap: 32px;
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(2, 50%);
+            
+        }
+
+        .hobby-text {
+
+
+        }
+
+        @media screen and (max-width: 1020px) {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        @media screen and (max-width: 650px){
+             display: flex;
+            flex-direction: column;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    {% set hobbies = [
+        {'headline': 'Mechatronik',
+        'content': 'In meiner Freizeit verbringe ich gerne viel Zeit in der Werkstat und  baue dinge wie Quads und kleine Roboter',
+        'icon': ''},
+        {'headline': 'Handball',
+        'content': 'Ich spiele gerne und viel Handball. Ich spiele bei EGB und in der Oberliga Ausserdem spiele ich im Herrenbereich.',
+        'icon': ''},
+        {'headline': 'Fahrrad ',
+        'content': 'Ich fahre gerne und viel Fahrrad. Grade auch in meiner Freizeit, ob Mountainbike Rennrad oder Selbstgebautes E-bike.',
+        'icon': ''},
+        {'headline': 'Programmieren',
+        'content': 'In der Schule, sowie auch in meiner Freizeit, bereitet mir das Programmieren mit PHP, CSS und Python  viel Freude. ',
+        'icon': ''},
+
+    ] %}
+
+    <section id="hobby" class="hobby">
+    <h1 class="text-uppercase">Hobbys</h1>
+        <div class="hobby-element">
+            <span class="hobby-cards">
+                {% for item in hobbies %}
+                    {% include 'components/card.html.twig' with item %}
+                {% endfor %}
+            </span>
+        </div>
+    </section>
+{% endblock %}

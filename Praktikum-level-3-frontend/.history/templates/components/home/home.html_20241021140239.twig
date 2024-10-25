@@ -1,0 +1,51 @@
+{% block style %}
+    <style>
+        .home {
+            width:100%;
+            height:100%;
+        }
+
+        .home-element {
+            background-image:url({{ asset('img/Profilpicture.jpg') }});
+            background-size: cover;
+            padding: 72px 32px 0;
+            height: calc(100vh - 72px);
+            display:flex;
+            justify-content: center;
+            align-items: center; /* Center content vertically */
+            flex-direction: column; /* Align content in column */
+        }
+
+        .download {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .download:hover {
+            background-color: #0056b3;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <section id="home" class="home">
+        <div class="home-element">
+            <h1 class='text-uppercase text-center'>Emil Kuehnen</h1>
+            {% if showDownloadButton %}
+                <!-- Google Drive Download Button -->
+                <a href="https://drive.google.com/uc?export=download&id=1-70W9Z6258B5BpbYWf5zbeEHc99Svd_l">
+                    <button type="button" class="download">Bewerbung herunterladen</button>
+                </a>
+            {% else %}
+                <!-- Optional message if the download button is hidden -->
+                <p>Der Download-Button ist momentan nicht verfügbar.</p>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

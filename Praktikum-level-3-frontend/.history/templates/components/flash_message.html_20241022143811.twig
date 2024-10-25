@@ -1,0 +1,33 @@
+{% block style %}
+    <style>
+        .btn {
+    padding: 16px;
+    border-radius: var(--border-radius-button);
+    font-family: var(--font-family-base);
+    border: 2px;
+    cursor: pointer;
+    padding-top:8%;
+}
+.btn-primary {
+    color: rgb(var(--prim));
+    border-radius: 2px;
+    border-color: rgb(var(--prim));
+}
+
+    </style>
+{% endblock %}
+
+
+{% block body %}
+    {% set flash_types = ['success', 'danger'] %}
+
+    {% for flash_type in flash_types %}
+        {% for message in app.flashes([id, '-', flash_type]|join) %}
+            <div class="alert alert-{{ flash_type }}">
+                {{ message }}
+                <br>
+                <a href="https://drive.google.com/uc?export=download&id=1-70W9Z6258B5BpbYWf5zbeEHc99Svd_l" class="btn-primary btn">Lebenslauf Herunterladen</a>
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}

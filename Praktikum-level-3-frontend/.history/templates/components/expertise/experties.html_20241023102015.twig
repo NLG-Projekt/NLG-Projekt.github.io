@@ -1,0 +1,64 @@
+{% block style %}
+    <style>
+        .expertise {
+            background-color: rgb(var(--color-primary-darker));
+            padding: 80px;
+        }
+        .expertise-element{
+            max-width: 1024px;
+            display: grid;
+            grid-gap: 32px;
+        }
+        @media screen and (max-width: 650px){
+            .expertise {
+                padding: 24px 80px 24px 24px;
+            }
+        }
+    </style>
+    {{ block('style', 'components/expertise/experties-item.html.twig') }}
+{% endblock %}
+
+{% block body %}
+    {% set expertises = [
+    {
+        'headline':'Elektronik/Mechatronik',
+        'percentage':50,
+    },
+    {
+        'headline':'Programmieren',
+        'percentage':30,
+    },
+    {
+        'headline':'Fahrrad',
+        'percentage':85,
+    },
+    {
+        'headline':'Fitness',
+        'percentage':85,
+    },
+    {
+        'headline':'Kreativität',
+        'percentage':90,
+    }
+    
+    ]
+    %}
+
+    <div id="expertise" class="expertise">
+        <div class="expertise-element">
+
+            {% for expertise in expertises %}
+                {% with expertise %}
+                    {{ block('body', 'components/expertise/experties-item.html.twig') }}
+                {% endwith %}
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        window.addEventListener('load', () => {})
+    </script>
+{% endblock %}

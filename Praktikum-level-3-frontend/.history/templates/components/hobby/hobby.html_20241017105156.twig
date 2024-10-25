@@ -1,0 +1,44 @@
+{% block style %}
+    <style>
+        .hobby {
+
+        }
+
+        .hobby-element{
+
+        }
+        .hobby-cards{
+
+        }
+
+        .hobby-text {
+
+        }
+
+        @media screen and (max-width: 1020px) {
+
+        }
+
+        @media screen and (max-width: 650px){
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    {% set hobbies = [
+        {'headline': 'Mechatronik',
+        'content': 'In meiner Freizeit verbringe ich gerne viel Zeit in der Werkstat und  baue dinge wie Quads und kleine Roboter',
+        'icon': ''},
+
+    ] %}
+
+    <section id="hobby" class="hobby">
+        <div class="hobby-element">
+            <span class="hobby-cards">
+                {% for item in hobbies %}
+                    {% include 'components/card.html.twig' with item %}
+                {% endfor %}
+            </span>
+        </div>
+    </section>
+{% endblock %}

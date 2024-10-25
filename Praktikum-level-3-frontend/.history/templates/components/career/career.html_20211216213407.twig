@@ -1,0 +1,31 @@
+{% block javascripts %}
+    <script>
+
+    </script>
+{% endblock %}
+{% block style %}
+    <style>
+        .career {
+
+        }
+
+        ul.career-element {
+
+        }
+
+        @media screen and (max-width: 1020px){
+
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    {% set career = [
+    ] %}
+    <section id="career" class="career">
+        <ul class="career-element">
+            {% for item in career %}
+                {% include 'components/career/timeline.html.twig' %}
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

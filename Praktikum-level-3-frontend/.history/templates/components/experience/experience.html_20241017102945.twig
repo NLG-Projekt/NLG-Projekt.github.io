@@ -1,0 +1,43 @@
+{% block javascripts %}
+    <script>
+
+    </script>
+{% endblock %}
+{% block style %}
+    <style>
+        .experience {
+        }
+
+        .experience-element {
+        }
+
+        @media screen and (max-width: 1020px){
+        }
+    </style>
+{% endblock %}
+{% block body %}
+
+        {% set experiences = [
+        {   
+            'headline':  'Praktikum Werkstatt',
+            'content': '2023 und 2024 habe ich ingesamt ein 3 wöchiges Praktikum in der Werkstat Grabe in Brakwede Gemacht. Dies ist eine Werkstat die sich mit dem Arbeiten mit Personen mit Handycap Außeinander setzen und auch zu Bethel gehören ',
+            'linkText': 'Webseite der Werkstatt',
+            'link' : 'xzy',
+            'img' : 'scrxyz',
+              
+            'headline':  'Praktikum Werkstatt',
+            'content': '2023 und 2024 habe ich ingesamt ein 3 wöchiges Praktikum in der Werkstat Grabe in Brakwede Gemacht. Dies ist eine Werkstat die sich mit dem Arbeiten mit Personen mit Handycap Außeinander setzen und auch zu Bethel gehören ',
+            'linkText': 'Webseite der Werkstatt',
+            'link' : 'xzy',
+            'img' : 'scrxyz'
+        }
+
+        
+        ] %}
+    <section id="experience" class="experience">
+        <div class="experience-element">
+            {% for item in experiences %}
+                {% include 'components/experience/experience-content.html.twig' %}
+            {% endfor %}</div>
+    </section>
+{% endblock %}

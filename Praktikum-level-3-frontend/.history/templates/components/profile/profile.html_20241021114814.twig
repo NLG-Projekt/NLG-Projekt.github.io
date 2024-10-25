@@ -1,0 +1,42 @@
+{% block javascripts %}
+    <script>
+
+    </script>
+{% endblock %}
+{% block style %}
+    <style>
+        #plant-profile {
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:right;
+            align-content:center;
+            padding:20px;
+            height:100%;
+            width:100%;
+        }
+
+        .infogroup {
+            color:rgb(var(--weiss));
+            font-size:24px;
+            padding-bottom:16px;
+
+        }
+
+        @media screen and (max-width: 1360px){
+            .infogroup {
+                content:hidden;        }
+    </style>
+{% endblock %}
+{% block body %}
+<div id="plant-profile">
+    <il class='text-uppercase p'>Name</il>
+    <il class='infogroup'>Emil</il>
+    <il class='text-uppercase'>Schule</il>
+    <il class='infogroup'>Bethel Gymnasium</il>
+    <il class='text-uppercase'>Email</il>
+    <il class='infogroup'>Wapiufbaivb@gmail.com</il>
+    <il class='text-uppercase'>Telefon</il>
+    <il class='infogroup'>+49 176 47061713</il>
+</div>
+{% endblock %}

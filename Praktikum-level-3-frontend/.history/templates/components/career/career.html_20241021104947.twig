@@ -1,0 +1,65 @@
+{% block javascripts %}
+    <script>
+
+    </script>
+{% endblock %}
+{% block style %}
+    <style>
+        .career {
+            background-color:rgb(var(--color-primary-darker));
+            padding-top:32px;
+
+        }
+            .erf{
+            padding:32px;
+            padding-top:64px;
+            background-color:rgb(var(--color-primary-darker));
+        }
+
+        ul.career-element {
+            col
+
+        }
+
+        @media screen and (max-width: 1020px){
+
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    <h2 class="erf">Werdegang</h2>
+    {% set career = [
+    {
+        "contentDate": "2012 bis 2017",
+        "content": " habe ich die Grundschule besucht in welcher ich zu früh eingeschult wurde und dementsprechend zurück gesetzt wurde",
+        "date": 2012
+    },
+    {
+        "contentDate": "2017 - 2019",
+        "content": " habe ich mich in meiner Schule FVB Gymnasium in der Technik und Werkel AG engagiert und gearbeitet.",
+        "date": 2012
+    },
+    {
+        "contentDate": "2019",
+        "content": " konnte ich erstmals Informatik wählen in der Schule und habe grosses Gefallen gefunden am programmieren und am Lösung finden für Probleme.",
+        "date": 2012
+    },
+    {
+        "contentDate": "2020-2021",
+        "content": " war ich auf Weltreise und habe nebenbei etwas auf unserem alten Laptop gecodet.",
+        "date": 2012
+    },
+    {
+        "contentDate": "2022",
+        "content": " Habe ich angefangen mein Traum Quad zu bauen. Dies ist mitlerweile fertig und war ein super Projekt",
+        "date": 2012
+    },
+    ] %}
+    <section id="career" class="career">
+        <ul class="career-element">
+            {% for item in career %}
+                {% include 'components/career/timeline.html.twig' %}
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

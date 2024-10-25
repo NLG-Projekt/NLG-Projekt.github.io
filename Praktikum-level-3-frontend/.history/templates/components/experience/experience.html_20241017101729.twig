@@ -1,0 +1,31 @@
+{% block javascripts %}
+    <script>
+
+    </script>
+{% endblock %}
+{% block style %}
+    <style>
+        .experience {
+        }
+
+        .experience-element {
+        }
+
+        @media screen and (max-width: 1020px){
+        }
+    </style>
+{% endblock %}
+{% block body %}
+
+        {% set experiences = [
+        
+
+        
+        ] %}
+    <section id="experience" class="experience">
+        <div class="experience-element">
+            {% for item in experiences %}
+                {% include 'components/experience/experience-content.html.twig' %}
+            {% endfor %}</div>
+    </section>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% block style %}
+    <style>
+        .home {
+            width:100%;
+            height:100%;
+        }
+
+        .home-element {
+            background-image:url({{ asset('img/Profilpicture.jpg') }});
+            background-size: cover;
+            padding: 72px 32px 0;
+            height: calc(100vh - 72px);
+            display:flex;
+            justify-content: center;
+            align-items: center; /* Center content vertically */
+            flex-direction: column; /* Align content in column */
+        }
+
+        .element--text {
+
+        }
+
+        .social-media {
+
+        }
+
+        .social-media--a {
+
+        }
+
+        .download {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .download:hover {
+            background-color: #0056b3;
+        }
+
+        @media screen and (max-width: 1020px) {
+
+        }
+        @media screen and (max-width: 1360px) {
+
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <section id="home" class="home">
+        <div class="home-element">
+            <h1 class='text-uppercase text-center'>Emil Kuehnen</h1>
+            {% if showDownloadButton %}
+                <!-- Download Button for the Google Drive Document -->
+                <a href="https://drive.google.com/uc?export=download&id=1-70W9Z6258B5BpbYWf5zbeEHc99Svd_l">
+                    <button type="button" class="download btn btn-primary">Bewerbung herunterladen</button>
+                </a>
+            {% endif %}
+            <div class="social-media">
+                <!-- Add your social media links here -->
+            </div>
+        </div>
+    </section>
+{% endblock %}

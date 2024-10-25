@@ -1,0 +1,51 @@
+{% block style %}
+    <style>
+        .hobby {
+        }
+
+        .hobby-element{
+
+        }
+        .hobby-cards{
+        }
+
+        .hobby-text {
+
+        }
+
+        @media screen and (max-width: 1020px) {
+
+        }
+
+        @media screen and (max-width: 650px){
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    {% set hobbies = [
+        {'headline': 'Mechatronik',
+        'content': 'In meiner Freizeit verbringe ich gerne viel Zeit in der Werkstat und  baue dinge wie Quads und kleine Roboter',
+        'icon': ''},
+        {'headline': 'Handball',
+        'content': 'Ich spiele gerne und viel Handball. Ich spiele bei EGB und in der Oberliga Ausserdem spiele ich im Herrenbereich.',
+        'icon': ''},
+        {'headline': 'Fahrrad ',
+        'content': 'Ich fahre gerne und viel Fahrrad. Grade auch in meiner Freizeit, ob Mountainbike Rennrad oder Selbstgebautes E-bike.',
+        'icon': ''},
+        {'headline': 'Programmieren',
+        'content': 'In der Schule, sowie auch in meiner Freizeit, bereitet mir das Programmieren mit PHP, CSS und Python  viel Freude. ',
+        'icon': ''},
+
+    ] %}
+
+    <section id="hobby" class="hobby">
+        <div class="hobby-element">
+            <span class="hobby-cards">
+                {% for item in hobbies %}
+                    {% include 'components/card.html.twig' with item %}
+                {% endfor %}
+            </span>
+        </div>
+    </section>
+{% endblock %}

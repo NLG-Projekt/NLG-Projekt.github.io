@@ -1,0 +1,56 @@
+{% block javascripts %}
+    <script>
+
+    </script>
+{% endblock %}
+{% block style %}
+    <style>
+        body{
+            background-color:rgb(var(--color-primary-darker));
+            height:110%;
+        }
+        .experience {
+                background-color: rgb(var(--color-primary-darker));
+                padding-top: 64px;
+        }
+        .erf{
+            padding:32px;
+            background-color:rgb(var(--color-primary-darker));
+        }
+
+        .experience-element {
+        }
+
+        @media screen and (max-width: 1020px){
+                            aspect-ratio: 2/1;
+                            width: 50%;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    <h2 class="erf">Erfahrungen</h2>
+        {% set experiences = [
+        {   
+            'headline':  'Praktikum Werkstatt',
+            'content': '2023 und 2024 habe ich ingesamt ein 3 wöchiges Praktikum in der Werkstat Grabe in Brakwede Gemacht. Dies ist eine Werkstat die sich mit dem Arbeiten mit Personen mit Handycap Außeinander setzen und auch zu Bethel gehören ',
+            'linkText': 'Webseite der Werkstatt',
+            'link' : 'https://www.bethel-regional.de/angebote-details/werkstatt-grabe-berufliche-teilhabe.html',
+            'img' : 'img/s.jpg.webp',
+              },
+              {
+            'headline':  'Reise',
+            'content': 'Während der Corona Zeit habe ich mit meiner Familie eine Weltreise gemacht, wir waren insgesamt 11 Monate auf Reisen Dies gab mir die Möglichkeit viel  über andere Kulturen, Bräuche und Länder zu lernen',
+            'linkText': 'Mehr zur Reise',
+            'link' : 'https://www.lz.de/owl/23153579_Weltreise-trotz-Corona-Bielefelder-Familie-erfuellt-sich-ihren-Traum.html',
+            'img' : 'img/211216-1700-354094462.jpg'
+        }
+
+        
+        ] %}
+    <section id="experience" class="experience">
+        <div class="experience-element">
+            {% for item in experiences %}
+                {% include 'components/experience/experience-content.html.twig' %}
+            {% endfor %}</div>
+    </section>
+{% endblock %}

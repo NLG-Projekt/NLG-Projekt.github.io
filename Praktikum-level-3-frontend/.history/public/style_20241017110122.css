@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    padding: 0;
+}
+
+:root {
+    --color-primary-dark: 0,0,0;
+    --color-primary-darker: 22,27,21;
+    --color-primary-normal: 255,255,255;
+    --color-primary-light: 185,219,113;
+    --color-primary-lighter: 246,254,241;
+    --weiß: 255,255,255;
+    --prim: 0,221,255;
+    --abstgr: 73,149,142;
+
+    --font-family-base: 'Poppins', sans-serif;
+    --font-bold: 700;
+    --font-light: 400;
+
+    --font-size-base: 18px;
+
+    --border-radius-button: 0px;
+}
+
+.bold {
+    font-weight: var(--font-bold);
+}
+
+.light {
+    font-weight: var(--font-light);
+}
+
+.color-primary-light {
+    color: rgb(var(--prim));
+}
+
+.color-primary-lighter {
+    color: rgb(var(--color-primary-lighter));
+}
+
+.color-primary-normal {
+    color: rgb(var(--color-primary-normal));
+}
+
+.color-primary-dark {
+    color: rgb(var(--color-primary-dark));
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+    color: rgb(var(--prim));
+}
+
+h1, h2, h3 {
+    font-family: var(--font-family-base);
+    font-weight: var(--font-bold);
+    color: rgb(var(--color-primary-light));
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 32px;
+    color: rgb(var(--prim));
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: rgb(var(--prim));
+}
+
+
+p {
+    font-family: var(--font-family-base);
+    font-weight: var(--font-light);
+    color: rgb(var(--color-primary-normal));
+    font-size: 18px;
+    line-height: 167%;
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--font-family-base);
+    font-weight: var(--font-light);
+}
+
+.btn {
+    padding: 16px;
+    border-radius: var(--border-radius-button);
+    font-family: var(--font-family-base);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: rgb(var(--color-primary-darker));
+    color: rgb(var(--prim));
+    border-radius: 2px;
+    border-color: rgb(var(--prim));
+}
+
+.backend p {
+    color: black;
+}
+
+.backend .c-linkCopied {
+    display: none;
+}
+
+.backend .active {
+    display: block;
+}
+

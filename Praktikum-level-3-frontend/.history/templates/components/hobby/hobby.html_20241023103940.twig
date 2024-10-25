@@ -1,0 +1,102 @@
+{% block style %}
+    <style>
+        .hobby {
+            background-color: rgb(var(--color-primary-darker));
+            padding: 80px;
+        }
+
+        .hobby-element {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Grid mit zwei Spalten */
+            justify-content: flex-end;
+            gap: 32px;
+        }
+
+        .hobby-cards {
+            display: grid;
+            grid-gap: 32px;
+            grid-template-columns: repeat(2, 1fr); /* Zwei Spalten im Grid */
+            width: 100%;
+        }
+
+        .card {
+            background-color: rgb(var(--color-primary-darker));
+            padding: 20px;
+            border-left: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            transition: border 0.3s ease, transform 0.3s ease; /* Weicher Übergang für Hover-Effekte */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 16px;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .card:hover {
+            border-left: 8px solid rgb(var(--prim)); /* Hellblauer Rand links beim Hover */
+            border-bottom: 8px solid rgb(var(--prim)); /* Hellblauer Rand unten beim Hover */
+            transform: translateY(-5px); /* Karte schwebt leicht */
+        }
+
+        @media screen and (max-width: 1020px) {
+            .hobby-element {
+                grid-template-columns: 1fr; /* Einzelne Spalte auf kleineren Bildschirmen */
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            .hobby-element {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    {% set hobbies = [
+        {'headline': 'Mechatronik',
+        'content': 'In meiner Freizeit verbringe ich gerne viel Zeit in der Werkstatt und baue Dinge wie Quads und kleine Roboter',
+        'icon': 'svg/3117187-200.svg'},
+        {'headline': 'Handball',
+        'content': 'Ich spiele gerne und viel Handball. Ich spiele bei EGB und in der Oberliga. Außerdem spiele ich im Herrenbereich.',
+        'icon': 'svg/6836874.svg'},
+        {'headline': 'Fahrrad',
+        'content': 'Ich fahre gerne und viel Fahrrad. Gerade auch in meiner Freizeit, ob Mountainbike, Rennrad oder Selbstgebautes E-bike.',
+        'icon': 'svg/71422.svg'},
+        {'headline': 'Programmieren',
+        'content': 'In der Schule, sowie auch in meiner Freizeit, bereitet mir das Programmieren mit PHP, CSS und Python viel Freude.',
+        'icon': 'svg/div-coding-icon.svg'}
+    ] %}
+
+    <section id="hobby" class="hobby">
+        <h2 class="h3">Hobbys</h2>
+        <div class="hobby-element">
+            <span class="hobby-cards">
+                {% for item in hobbies %}
+                    <div class="card">
+                        <img src="{{ item.icon }}" alt="{{ item.headline }}">
+                        <h3>{{ item.headline }}</h3>
+                        <p>{{ item.content }}</p>
+                    </div>
+                {% endfor %}
+            </span>
+        </div>
+    </section>
+{% endblock %}

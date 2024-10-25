@@ -1,0 +1,72 @@
+{% block style %}
+    <style>
+.hobby {
+    background-color: #1B1B1B; /* Dark background */
+    padding: 80px;
+}
+
+.hobby-element {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 60% auto; /* Layout for icon & text */
+    grid-gap: 32px;
+}
+
+.hobby-cards {
+    display: grid;
+    grid-gap: 32px;
+    width: 100%;
+    grid-template-columns: repeat(2, 50%); /* 2 columns */
+}
+
+.hobby-card {
+    background-color: #00C8FF; /* Bright blue */
+    padding: 32px;
+    color: #FFFFFF; /* White text */
+    border: 4px solid #00C8FF; /* Blue border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow:
+
+        .hobby-text {
+                       width: auto;
+            padding: 0 32px;
+
+
+        }
+
+        @media screen and (max-width: 1020px) {
+
+        }
+
+        @media screen and (max-width: 650px){
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    {% set hobbies = [
+        {'headline': 'Mechatronik',
+        'content': 'In meiner Freizeit verbringe ich gerne viel Zeit in der Werkstat und  baue dinge wie Quads und kleine Roboter',
+        'icon': ''},
+        {'headline': 'Handball',
+        'content': 'Ich spiele gerne und viel Handball. Ich spiele bei EGB und in der Oberliga Ausserdem spiele ich im Herrenbereich.',
+        'icon': ''},
+        {'headline': 'Fahrrad ',
+        'content': 'Ich fahre gerne und viel Fahrrad. Grade auch in meiner Freizeit, ob Mountainbike Rennrad oder Selbstgebautes E-bike.',
+        'icon': ''},
+        {'headline': 'Programmieren',
+        'content': 'In der Schule, sowie auch in meiner Freizeit, bereitet mir das Programmieren mit PHP, CSS und Python  viel Freude. ',
+        'icon': ''},
+
+    ] %}
+
+    <section id="hobby" class="hobby">
+        <div class="hobby-element">
+            <span class="hobby-cards">
+                {% for item in hobbies %}
+                    {% include 'components/card.html.twig' with item %}
+                {% endfor %}
+            </span>
+        </div>
+    </section>
+{% endblock %}
